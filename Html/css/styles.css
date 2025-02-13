@@ -207,3 +207,31 @@ footer {
         font-size: 14px;
     }
 }
+
+
+/* Admin Dashboard Styling */
+.admin-dashboard {
+    background-color: #f4f4f4;
+}
+
+.card-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffc107;
+}
+
+.table {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #333;
+    color: white;
+}
