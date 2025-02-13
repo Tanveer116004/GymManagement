@@ -235,3 +235,14 @@ footer {
     background-color: #333;
     color: white;
 }
+
+/* Member Dashboard Styling */
+
+.member-dashboard {
+    background-color: #f4f4f4;
+}
+
+.list-group-item {
+    padding: 12px;
+    border: none;
+}
