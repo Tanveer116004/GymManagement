@@ -163,13 +163,13 @@ footer {
     color: #333;
 }
 
-.form-control {
+.form-control, .form-select {
     border-radius: 5px;
     padding: 10px;
     font-size: 14px;
 }
 
-.form-control:focus {
+.form-control:focus, .form-select:focus {
     border-color: #ffc107;
     box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
 }
@@ -245,4 +245,18 @@ footer {
 .list-group-item {
     padding: 12px;
     border: none;
+}
+
+/* Add New Member Styling */
+.add-member {
+    background-color: #f4f4f4;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #333;
 }
