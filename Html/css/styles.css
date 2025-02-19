@@ -142,7 +142,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
+    /* max-width: 400px; */
 }
 
 .card-title {
@@ -259,4 +259,22 @@ footer {
 .form-label {
     font-weight: bold;
     color: #333;
+}
+
+/* View All Users/Trainers Styling */
+
+.dataTables_wrapper .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #000;
+}
+
+.dataTables_wrapper .btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
 }

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View All Trainers - FitLife Gym</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.bootstrap5.min.css">
+    <!-- DataTables Buttons CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.bootstrap5.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">FitLife Gym</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="view-users.html">Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="view-trainers.html">Trainers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="classes.html">Classes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="payments.html">Payments</a>
+                    </li>
+                </ul>
+                <div class="auth-buttons ms-3">
+                    <a href="login.html" class="btn btn-outline-light">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- View All Trainers Content -->
+    <section class="view-trainers flex-grow-1 py-5">
+        <div class="container">
+            <h1 class="text-center mb-5">View All Trainers</h1>
+
+            <!-- Add New Trainer Button -->
+            <div class="text-end mb-3">
+                <a href="add-trainer.html" class="btn btn-warning">
+                    <i class="fas fa-plus"></i> Add New Trainer
+                </a>
+            </div>
+
+            <!-- Trainers Table -->
+            <div class="card shadow">
+                <div class="card-body">
+                    <table id="trainersTable" class="table table-striped" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Specialization</th>
+                                <th>Hire Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Alice Johnson</td>
+                                <td>alice.johnson@example.com</td>
+                                <td>+1234567890</td>
+                                <td>Yoga</td>
+                                <td>2023-07-01</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary me-2">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </button>
+                                    <button class="btn btn-sm btn-danger">
+                                        <i class="fas fa-trash"></i> Delete
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Bob Williams</td>
+                                <td>bob.williams@example.com</td>
+                                <td>+0987654321</td>
+                                <td>Weightlifting</td>
+                                <td>2023-06-15</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary me-2">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </button>
+                                    <button class="btn btn-sm btn-danger">
+                                        <i class="fas fa-trash"></i> Delete
+                                    </button>
+                                </td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p>&copy; 2023 FitLife Gym. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/responsive.bootstrap5.min.js"></script>
+    <!-- DataTables Buttons JS -->
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.bootstrap5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        $(document).ready(function () {
+            $('#trainersTable').DataTable({
+                dom: 'Bfrtip',
+                responsive: true,
+                buttons: [
+                    {
+                        extend: 'excel',
+                        text: 'Export to Excel',
+                        className: 'btn btn-warning'
+                    },
+                    {
+                        extend: 'pdf',
+                        text: 'Export to PDF',
+                        className: 'btn btn-warning'
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
