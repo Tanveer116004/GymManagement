@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance - FitLife Gym</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">FitLife Gym</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="trainer-dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trainer-users.html">Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trainer-plans.html">Plans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="attendance.html">Attendance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trainer-profile.html">Profile</a>
+                    </li>
+                </ul>
+                <div class="auth-buttons ms-3">
+                    <a href="login.html" class="btn btn-outline-light">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Attendance Content -->
+    <section class="attendance flex-grow-1 py-5">
+        <div class="container">
+            <h1 class="text-center mb-5">Attendance Tracking</h1>
+
+            <!-- Check-In/Check-Out Form -->
+            <div class="row mb-5">
+                <div class="col-md-6 mx-auto">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h3 class="card-title text-center mb-4">Check-In/Check-Out</h3>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="userType" class="form-label">Select User Type</label>
+                                    <select class="form-select" id="userType">
+                                        <option value="member">Member</option>
+                                        <option value="trainer">Trainer</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="userId" class="form-label">User ID</label>
+                                    <input type="text" class="form-control" id="userId" placeholder="Enter User ID" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="action" class="form-label">Action</label>
+                                    <select class="form-select" id="action">
+                                        <option value="checkin">Check-In</option>
+                                        <option value="checkout">Check-Out</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-warning w-100">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Attendance Log -->
+            <div class="row">
+                <div class="col">
+                    <h2 class="mb-4">Attendance Log</h2>
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>User ID</th>
+                                        <th>User Type</th>
+                                        <th>Action</th>
+                                        <th>Timestamp</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>101</td>
+                                        <td>Member</td>
+                                        <td>Check-In</td>
+                                        <td>2023-10-10 09:00 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>102</td>
+                                        <td>Trainer</td>
+                                        <td>Check-In</td>
+                                        <td>2023-10-10 09:15 AM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>101</td>
+                                        <td>Member</td>
+                                        <td>Check-Out</td>
+                                        <td>2023-10-10 11:00 AM</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p>&copy; 2023 FitLife Gym. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Calendar - FitLife Gym</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FullCalendar CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">FitLife Gym</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="member-dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="member-plans.html">Plans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="training_calendar.html">Training Calendar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="member-profile.html">Profile</a>
+                    </li>
+                </ul>
+                <div class="auth-buttons ms-3">
+                    <a href="login.html" class="btn btn-outline-light">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Training Calendar Content -->
+    <section class="training-calendar flex-grow-1 py-5">
+        <div class="container">
+            <h1 class="text-center mb-5">Training Calendar</h1>
+
+            <!-- Calendar View -->
+            <div class="row mb-5">
+                <div class="col">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <div id="calendar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tracking -->
+            <div class="row">
+                <div class="col">
+                    <h2 class="mb-4">Progress Tracking</h2>
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <div class="row">
+                                <!-- Completed Sessions -->
+                                <div class="col-md-4">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Completed Sessions</h5>
+                                            <p class="card-text display-4">12</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Upcoming Sessions -->
+                                <div class="col-md-4">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Upcoming Sessions</h5>
+                                            <p class="card-text display-4">3</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Goals Achieved -->
+                                <div class="col-md-4">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Goals Achieved</h5>
+                                            <p class="card-text display-4">5</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p>&copy; 2023 FitLife Gym. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FullCalendar JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js"></script>
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <!-- Custom JS for Calendar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                events: [
+                    {
+                        title: 'Session with John Doe',
+                        start: '2023-10-15T10:00:00',
+                        end: '2023-10-15T11:00:00',
+                        color: '#28a745' // Green for confirmed sessions
+                    },
+                    {
+                        title: 'Session with Jane Smith',
+                        start: '2023-10-17T14:00:00',
+                        end: '2023-10-17T15:00:00',
+                        color: '#ffc107' // Yellow for pending sessions
+                    }
+                ]
+            });
+            calendar.render();
+        });
+    </script>
+</body>
+</html>
