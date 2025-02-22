@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports & Analytics - FitLife Gym</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Chart.js for Charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">FitLife Gym</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-members.html">Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="reports_analytics.html">Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-profile.html">Profile</a>
+                    </li>
+                </ul>
+                <div class="auth-buttons ms-3">
+                    <a href="login.html" class="btn btn-outline-light">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Reports & Analytics Content -->
+    <section class="reports-analytics flex-grow-1 py-5">
+        <div class="container">
+            <h1 class="text-center mb-5">Reports & Analytics</h1>
+
+            <!-- Revenue Overview -->
+            <div class="row mb-5">
+                <div class="col">
+                    <h2 class="mb-4">Revenue Overview</h2>
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <div class="row">
+                                <!-- Total Revenue -->
+                                <div class="col-md-4">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Total Revenue</h5>
+                                            <p class="card-text display-4">$12,345</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Monthly Revenue Chart -->
+                                <div class="col-md-8">
+                                    <canvas id="revenueChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Membership Statistics -->
+            <div class="row mb-5">
+                <div class="col">
+                    <h2 class="mb-4">Membership Statistics</h2>
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <div class="row">
+                                <!-- Active Members -->
+                                <div class="col-md-4">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Active Members</h5>
+                                            <p class="card-text display-4">150</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- New Sign-Ups -->
+                                <div class="col-md-4">
+                                    <div class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">New Sign-Ups</h5>
+                                            <p class="card-text display-4">25</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Membership Growth Chart -->
+                                <div class="col-md-4">
+                                    <canvas id="membershipChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trainer Performance -->
+            <div class="row">
+                <div class="col">
+                    <h2 class="mb-4">Trainer Performance</h2>
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Trainer Name</th>
+                                        <th>Sessions Conducted</th>
+                                        <th>Member Feedback</th>
+                                        <th>Attendance</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>John Doe</td>
+                                        <td>50</td>
+                                        <td>4.8/5</td>
+                                        <td>95%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jane Smith</td>
+                                        <td>45</td>
+                                        <td>4.7/5</td>
+                                        <td>92%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alice Johnson</td>
+                                        <td>40</td>
+                                        <td>4.6/5</td>
+                                        <td>90%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p>&copy; 2023 FitLife Gym. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <!-- Chart.js Script -->
+    <script>
+        // Revenue Chart
+        const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+        const revenueChart = new Chart(revenueCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                datasets: [{
+                    label: 'Monthly Revenue',
+                    data: [1000, 1500, 1200, 1800, 2000, 2500, 3000],
+                    borderColor: '#ffc107',
+                    backgroundColor: 'rgba(255, 193, 7, 0.2)',
+                    fill: true,
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                    }
+                }
+            }
+        });
+
+        // Membership Chart
+        const membershipCtx = document.getElementById('membershipChart').getContext('2d');
+        const membershipChart = new Chart(membershipCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                datasets: [{
+                    label: 'New Sign-Ups',
+                    data: [10, 15, 12, 18, 20, 25, 30],
+                    backgroundColor: '#28a745',
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Custom Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffc107 !important; /* Bootstrap's warning color */
+}
+
+.carousel {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.carousel-item {
+  height: 500px;
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+      height: 300px; /* Smaller height for mobile */
+  }
+}
+
+.carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%; /* Ensure captions don't overflow on small screens */
+  max-width: 600px; /* Limit maximum width */
+}
+
+.carousel-caption h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.carousel-caption p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.carousel-caption .btn {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 768px) {
+  .carousel-caption {
+      padding: 15px;
+  }
+
+  .carousel-caption h1 {
+      font-size: 24px; /* Smaller font size for mobile */
+  }
+
+  .carousel-caption p {
+      font-size: 16px; /* Smaller font size for mobile */
+  }
+
+  .carousel-caption .btn {
+      font-size: 14px; /* Smaller button text for mobile */
+      padding: 8px 16px;
+  }
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #000;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+  border-color: #e0a800;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+margin-top: 0 !important;
+}
+
+.social-links a {
+  color: white;
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+.social-links a:hover {
+  color: #ffc107;
+}
+
+#heroCarousel {
+  flex: 1;
+}
+
+
+/* Login Section Styling */
+.login-section {
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  /* max-width: 400px; */
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-check-input:checked {
+  background-color: #ffc107; /* Bootstrap's warning color */
+  border-color: #ffc107;
+}
+
+.form-check-label {
+  font-size: 14px;
+  color: #333;
+}
+
+.form-control, .form-select {
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+.d-grid .btn {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.text-center a {
+  color: #ffc107;
+  text-decoration: none;
+}
+
+.text-center a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card {
+      margin-top: 20px;
+  }
+
+  .card-title {
+      font-size: 20px;
+  }
+
+  .form-control {
+      font-size: 12px;
+  }
+
+  .d-grid .btn {
+      font-size: 14px;
+  }
+}
+
+
+/* Admin Dashboard Styling */
+.admin-dashboard {
+  background-color: #f4f4f4;
+}
+
+.card-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffc107;
+}
+
+.table {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table th, .table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #333;
+  color: white;
+}
+
+/* Member Dashboard Styling */
+
+.member-dashboard {
+  background-color: #f4f4f4;
+}
+
+.list-group-item {
+  padding: 12px;
+  border: none;
+}
+
+/* Add New Member Styling */
+.add-member {
+  background-color: #f4f4f4;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #333;
+}
+
+/* View All Users/Trainers Styling */
+
+.dataTables_wrapper .btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #000;
+}
+
+.dataTables_wrapper .btn-warning:hover {
+  background-color: #e0a800;
+  border-color: #e0a800;
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+}
