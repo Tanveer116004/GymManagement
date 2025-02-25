@@ -32,7 +32,7 @@ export default function login() {
                             </form>
                             <hr className="my-4"/>
                             <div className="text-center">
-                                <p className="mb-0">Don't have an account? <Link href="signup.html" className="text-warning">Sign Up</Link></p>
+                                <p className="mb-0">Dont have an account? <Link href="signup.html" className="text-warning">Sign Up</Link></p>
                             </div>
                         </div>
                     </div>

@@ -24,7 +24,7 @@ const Navbar = () => {
                     </li>
                 </ul>
                 <div className="auth-buttons ms-3">
-                <Link href="/auth/login" className="btn btn-outline-light me-2">Login</Link>
+                <Link href="/login" className="btn btn-outline-light me-2">Login</Link>
                     <button className="btn btn-warning">Sign Up</button>
                 </div>
             </div>
